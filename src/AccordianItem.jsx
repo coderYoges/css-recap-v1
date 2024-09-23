@@ -13,6 +13,7 @@ const StyledAnswer = styled.span`
   font-weight: 400;
   color: #808080;
   text-decoration: none;
+  line-height: 1.2;
 `;
 
 const AccordianItem = ({
@@ -30,7 +31,7 @@ const AccordianItem = ({
       <div className="card-header" id={cardId}>
         <h5 className="mb-0">
           <button
-            className="btn btn-link"
+            className="btn btn-link w-100 text-left"
             data-toggle="collapse"
             data-target={collapseTarget}
             aria-expanded="true"
@@ -48,9 +49,8 @@ const AccordianItem = ({
         data-parent="#accordion"
       >
         <div className="card-body">
-          
           <StyledAnswer>
-            <ul class="list-group list-group-flush">
+            <ul className="list-group list-group-flush">
               {answers.map((answer, index) => (
                 <li className="list-group-item" key={"ansnwer" + index}>
                   {answer}
